@@ -73,6 +73,7 @@ function dragleave(e) {
 function drop(e) {
 	e.stopPropagation();
 	e.preventDefault();
+    dropbox.classList.remove("over")
 
 	var dt = e.dataTransfer;
 	var files = dt.files;
