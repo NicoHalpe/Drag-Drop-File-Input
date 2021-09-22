@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.dropzone {
+	height: 300px;
+	width: 700px;
+    padding: 10px;
+    border: 2px dashed black;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+    
+    opacity: .5;
+}
+
+.dropzone.over {
+    opacity: 1;
+}
+
+.dropzone.files {
+    display: grid;
+    align-items: initial;
+    justify-content: initial;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(38px, 1fr));
+    gap: 10px;
+}
+
+.dropPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropzone.files .dropPlaceholder {
+    display: none;
+}
+
+.dropzone .item {
+    position: relative;
+    min-height: 38px;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 0 8px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    cursor: default;
+}
+
+.dropzone .item span {
+    margin: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropzone .item img {
+    user-select: none;
+}
+
+.dropzone .item .close {
+    min-width: 16px !important;
+    cursor: pointer;
+}
+
+.custom-file-input {
+	display: none;
+}
+
+.dropzone::-webkit-scrollbar-track {
+	border-radius: 10px;
+	border: 5px solid transparent;
+	box-shadow: inset 0 0 14px 14px transparent;
+}
+
+.dropzone::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	border: 5px solid transparent;
+	box-shadow: inset 0 0 14px 14px #bbbbbe;
+}
+.dropzone::-webkit-scrollbar-thumb:hover {
+	border-radius: 10px;
+	border: 5px solid transparent;
+	box-shadow: inset 0 0 14px 14px #a4a4a7;
+}
+
+.dropzone::-webkit-scrollbar {
+	width: 16px;
+}
