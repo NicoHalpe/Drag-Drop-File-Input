@@ -10,7 +10,7 @@ body {
 	height: 40%;
 	width: 70%;
     padding: 10px;
-    border: 2px dashed rgba(0, 0, 0, 0.5);
+    border: 2px dashed rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 
     cursor: pointer;
@@ -41,12 +41,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: .5;
+    color: rgba(0, 0, 0, 0.4);
     text-align: center;
 }
 
 .dropzone.over .dropPlaceholder {
-    opacity: 1;
+    color: black;
 }
 
 .dropzone.files .dropPlaceholder {
